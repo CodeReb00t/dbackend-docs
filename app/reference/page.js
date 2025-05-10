@@ -15,14 +15,17 @@ const Reference = () => {
             {/* Sidebar */}
             <Sidebar sections={examples} toggleSidebar={toggleSidebar} isOpen={isSidebarOpen}/>
             {/* Content */}
-            <main className="flex-1 px-10 py-12 space-y-16">
+            <div className="flex-1 w-full overflow-x-auto">
+                <main className="flex-1 px-4 sm:px-10 py-12 space-y-16 transition-all duration-300 w-full break-words">
                 <section id="auth-api">
                     <h2 className="text-2xl font-semibold mb-2">🔐 Auth API</h2>
                     <p>
                         The <strong>Auth API</strong> handles user authentication, including signup, signin, email
                         verification, password reset, and middleware for protecting routes.
                     </p>
+                    <br/>
                     <h3 className="text-xl font-semibold">Example Usage</h3>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const backend = require("dbackend"); // THE Backend
 
@@ -62,7 +65,9 @@ await auth.resetPassword(resetToken, "newPassword123");`}
                         The <strong>Mailer API</strong> allows you to send emails for user verification, password reset,
                         and other notifications.
                     </p>
+                    <br/>
                     <h3 className="text-xl font-semibold">Example Usage</h3>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const backend = require("dbackend"); // THE Backend
 
@@ -89,7 +94,9 @@ await mailer.sendMail({
                         The <strong>Middleware API</strong> allows you to use built-in middleware for tasks like JSON
                         parsing, URL encoding, and enabling CORS.
                     </p>
+                    <br/>
                     <h3 className="text-xl font-semibold">Example Usage</h3>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const backend = require("dbackend"); // THE Backend
 
@@ -113,7 +120,9 @@ backend.middlewares(app, [
                     <p>
                         The <strong>MongoDB API</strong> connects your app to a MongoDB database using Mongoose.
                     </p>
+                    <br/>
                     <h3 className="text-xl font-semibold">Example Usage</h3>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const backend = require("dbackend"); // THE Backend
 
@@ -129,6 +138,7 @@ backend.mongodb({
                     <p>
                         Here's a complete example that demonstrates how to use all the services in a simple app.
                     </p>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const backend = require("dbackend"); // THE Backend
 const express = require("express");
@@ -185,6 +195,7 @@ app.listen(3000, () => {
                     </pre>
                 </section>
             </main>
+            </div>
         </div>
     );
 };

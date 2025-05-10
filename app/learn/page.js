@@ -47,10 +47,12 @@ const Learn = () => {
                     <p>
                         The <strong>Auth API</strong> handles user authentication, including signup, signin, email verification, password reset, and middleware for protecting routes.
                     </p>
+                    <br/>
                     <h3 className="text-xl font-semibold">Setup Authentication</h3>
                     <p>
                         To set up the authentication service, you need to configure it with a JWT secret, the user model, and optionally a mailer for email verification and password reset functionalities. Here's how you do it:
                     </p>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const backend = require("dbackend"); // THE Backend
 
@@ -60,7 +62,7 @@ const auth = backend.auth({
   mailer: mailer, // Optional: Mailer for email verification and password reset
 });`}
                     </pre>
-
+                    <br/>
                     <h3 className="text-xl font-semibold">Signup</h3>
                     <p>This function registers a new user. It takes the following parameters:</p>
                     <ul className="list-disc pl-6 space-y-1">
@@ -68,6 +70,7 @@ const auth = backend.auth({
                         <li><strong>password:</strong> The user's password (String)</li>
                         <li><strong>name:</strong> The user's name (String)</li>
                     </ul>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`await auth.signup({
     email: "user@example.com",
@@ -75,37 +78,47 @@ const auth = backend.auth({
     name: "Your Name",
 });`}
                     </pre>
-
+                    <br/>
                     <h3 className="text-xl font-semibold">Signin</h3>
                     <p>This function logs in an existing user. It requires the following parameters:</p>
                     <ul className="list-disc pl-6 space-y-1">
                         <li><strong>email:</strong> The user's email (String)</li>
                         <li><strong>password:</strong> The user's password (String)</li>
                     </ul>
+                    <br/>
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`const result = await auth.signin({
     email: "user@example.com",
     password: "yourpassword",
 });`}
                     </pre>
+                    <br/>
 
                     <h3 className="text-xl font-semibold">Verify Email</h3>
                     <p>This function verifies a user's email by the token sent during signup.</p>
                     <ul className="list-disc pl-6 space-y-1">
                         <li><strong>token:</strong> The email verification token (String)</li>
+
                     </ul>
+                    <br/>
+
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`await auth.verifyEmail(verificationToken);`}
                     </pre>
+                    <br/>
 
                     <h3 className="text-xl font-semibold">Forgot Password</h3>
                     <p>This function sends a password reset link to the user's email.</p>
+
                     <ul className="list-disc pl-6 space-y-1">
                         <li><strong>email:</strong> The user's email (String)</li>
                     </ul>
+                    <br/>
+
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`await auth.forgotPassword("user@example.com");`}
                     </pre>
+                    <br/>
 
                     <h3 className="text-xl font-semibold">Reset Password</h3>
                     <p>This function resets the user's password using the token from the password reset email.</p>
@@ -113,6 +126,8 @@ const auth = backend.auth({
                         <li><strong>token:</strong> The reset password token (String)</li>
                         <li><strong>newPassword:</strong> The new password (String)</li>
                     </ul>
+                    <br/>
+
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`await auth.resetPassword(resetToken, "newPassword123");`}
                     </pre>
@@ -123,6 +138,8 @@ const auth = backend.auth({
                     <p>
                         The <strong>Mailer API</strong> allows you to send emails for user verification, password reset, and other notifications.
                     </p>
+                    <br/>
+
                     <h3 className="text-xl font-semibold">sendMail</h3>
                     <p>This function sends an email. It requires the following parameters:</p>
                     <ul className="list-disc pl-6 space-y-1">
@@ -131,6 +148,8 @@ const auth = backend.auth({
                         <li><strong>text:</strong> The plain text version of the email (String)</li>
                         <li><strong>html:</strong> The HTML version of the email (String)</li>
                     </ul>
+                    <br/>
+
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`await mailer.sendMail({
     to: "user@example.com",
@@ -145,8 +164,12 @@ const auth = backend.auth({
                     <p>
                         The <strong>Middleware API</strong> allows you to use built-in middleware for tasks like JSON parsing, URL encoding, and enabling CORS.
                     </p>
+                    <br/>
+
                     <h3 className="text-xl font-semibold">middlewares</h3>
                     <p>This function applies middleware to your Express app. It accepts an array of middleware names or custom middleware functions.</p>
+                    <br/>
+
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`backend.middlewares(app, ["json", "urlencoded", "cors"]);`}
                     </pre>
@@ -157,8 +180,12 @@ const auth = backend.auth({
                     <p>
                         The <strong>MongoDB API</strong> connects your app to a MongoDB database. It accepts a configuration object with the connection URL.
                     </p>
-                    <h3 className="text-xl font-semibold">connectMongoDB</h3>
+                    <br/>
+
+                    <h3 className="text-xl font-semibold">mongodb</h3>
                     <p>This function connects to MongoDB using Mongoose.</p>
+                    <br/>
+
                     <pre className="bg-gray-900 text-green-200 text-sm p-4 rounded-md overflow-x-auto">
 {`backend.mongodb({ url: "mongodb://localhost:27017/mydb" });`}
                     </pre>

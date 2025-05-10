@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const Sidebar = ({ sections, isOpen, toggleSidebar }) => {
     return (
         <>
-            {/* Toggle Button (Always Visible) */}
             <button
                 className={`
                     fixed z-50 p-2 m-4 bg-black text-white dark:bg-white dark:text-black rounded-md shadow-md transition-all
@@ -32,7 +31,7 @@ const Sidebar = ({ sections, isOpen, toggleSidebar }) => {
                             key={section.id}
                             href={`#${section.id}`}
                             className="block text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600"
-                            onClick={() => isOpen && toggleSidebar()} // Optional for mobile
+                            onClick={() => isOpen && toggleSidebar()}
                         >
                             {section.title}
                         </a>
