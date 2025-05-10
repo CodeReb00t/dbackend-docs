@@ -25,19 +25,21 @@ function Footer() {
                 <div>
                     <h3 className="text-xl font-semibold mb-4 text-purple-500">Learn</h3>
                     <div className="flex flex-col space-y-2">
-                        <Link href="/learn" className="hover:text-purple-500 transition-colors">Learn 1</Link>
-                        <Link href="/learn" className="hover:text-purple-500 transition-colors">Learn 2</Link>
-                        <Link href="/learn" className="hover:text-purple-500 transition-colors">Learn 3</Link>
+                        <Link href="/learn" className="hover:text-purple-500 transition-colors">Auth API</Link>
+                        <Link href="/learn" className="hover:text-purple-500 transition-colors">Middleware API</Link>
+                        <Link href="/learn" className="hover:text-purple-500 transition-colors">MongoDB API</Link>
+                        <Link href="/learn" className="hover:text-purple-500 transition-colors">Mailer API</Link>
                     </div>
                 </div>
 
                 {/* Reference Section */}
                 <div>
-                    <h3 className="text-xl font-semibold mb-4 text-purple-500">Reference</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-purple-500">Examples</h3>
                     <div className="flex flex-col space-y-2">
-                        <Link href="/reference" className="hover:text-purple-500 transition-colors">Reference 1</Link>
-                        <Link href="/reference" className="hover:text-purple-500 transition-colors">Reference 2</Link>
-                        <Link href="/reference" className="hover:text-purple-500 transition-colors">Reference 3</Link>
+                        <Link href="/reference" className="hover:text-purple-500 transition-colors">Auth API</Link>
+                        <Link href="/reference" className="hover:text-purple-500 transition-colors">Middleware API</Link>
+                        <Link href="/reference" className="hover:text-purple-500 transition-colors">MongoDB API</Link>
+                        <Link href="/reference" className="hover:text-purple-500 transition-colors">Mailer API</Link>
                     </div>
                 </div>
             </div>

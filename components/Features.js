@@ -31,7 +31,7 @@ function Features() {
                             </p>
                         </div>
 
-                        <div className="md:w-1/2 w-full h-auto rounded-xl overflow-hidden shadow-lg bg-white/30 dark:bg-white/5 p-4 backdrop-blur-md flex items-center justify-center">
+                        <div className="md:w-1/2 w-full h-auto rounded-xl overflow-hidden    p-4 backdrop-blur-md flex items-center justify-center">
                             {feature.img ? (
                                 <Image
                                     src={feature.img}

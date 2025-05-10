@@ -19,7 +19,7 @@ function Navbar() {
                 {/* Navigation Links */}
                 <div className="flex flex-wrap items-center gap-4 text-sm md:text-base font-medium">
                     <Link href="/learn" className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors">Learn</Link>
-                    <Link href="/reference" className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors">References</Link>
+                    <Link href="/reference" className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors">Examples</Link>
                     <ModeToggle />
                     <Link
                         href="https://github.com/CodeReb00t/dbackend"
