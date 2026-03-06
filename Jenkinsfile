@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/CodeReb00t/dbackend-docs.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
