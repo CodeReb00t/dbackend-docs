@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbackend-docs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbackend-docs
+  template:
+    metadata:
+      labels:
+        app: dbackend-docs
+    spec:
+      containers:
+      - name: dbackend-docs
+        image: codereb00t/dbackend-docs:latest
+        ports:
+        - containerPort: 3000
